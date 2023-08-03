@@ -3,10 +3,13 @@ mod primitives;
 mod string_ops;
 mod custom_types {
     pub mod structs;
-    pub mod enums;
+    pub mod enums {
+      pub mod enums;
+      pub mod use_enums;
+    }
 }
 use custom_types::structs;
-use crate::custom_types::enums;
+use custom_types::enums;
 
 fn main() {
     println!("===== hello world =====");
@@ -16,5 +19,6 @@ fn main() {
     println!("\n===== structs =====");
     structs::structs();
     println!("\n===== enum =====");
-    enums::enum_validation();
+    enums::enums::enum_validation();
+    enums::use_enums::use_enums();
 }
