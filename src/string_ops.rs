@@ -3,52 +3,55 @@ pub trait ScalaLikeStringOps {
   /// It removes the leading whitespace chars then remove the subsequent '|' if found.
   /// # Examples
   /// ## For `String`,
+  ///
   /// ```
-  /// let s = format!("a=123
-  ///                 |b=456
-  ///                 |c=789
-  ///                 |");
-  /// s.strip_margin();
-  /// ```
-  /// returns
-  /// ```
-  /// "a=123
+  /// use rust_by_example::string_ops::ScalaLikeStringOps;
+  ///
+  /// let actual = format!("a=123
+  ///                      |b=456
+  ///                      |c=789
+  ///                      |").strip_margin();
+  /// let expected = "a=123
   /// b=456
   /// c=789
-  /// "
+  /// ";
+  ///
+  /// assert_eq!(actual, expected);
   /// ```
   /// ***
   ///
   /// ## For `str`,
   /// ```
-  /// let s = "a=123
-  ///         |b=456
-  ///         |c=789
-  ///         |".strip_margin();
-  /// ```
-  /// returns
-  /// ```
-  /// "a=123
+  /// use rust_by_example::string_ops::ScalaLikeStringOps;
+  ///
+  /// let actual = "a=123
+  ///              |b=456
+  ///              |c=789
+  ///              |".strip_margin();
+  ///
+  /// let expected = "a=123
   /// b=456
   /// c=789
-  /// "
+  /// ";
+  /// assert_eq!(actual, expected);
   /// ```
   /// ***
   ///
   /// ## Intentional indentation with `|`
   ///
   /// ```
-  /// let s = "a=123
-  ///         |  b=456
-  ///         |    c=789
-  ///         |".strip_margin();
-  /// ```
-  /// returns
-  /// ```
-  /// "a=123
+  /// use rust_by_example::string_ops::ScalaLikeStringOps;
+  ///
+  /// let actual = "a=123
+  ///              |  b=456
+  ///              |    c=789
+  ///              |".strip_margin();
+  ///
+  /// let expected = "a=123
   ///   b=456
   ///     c=789
-  /// "
+  /// ";
+  /// assert_eq!(actual, expected);
   /// ```
   fn strip_margin(&self) -> String;
 }
