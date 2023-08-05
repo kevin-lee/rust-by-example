@@ -75,23 +75,18 @@ fn unsigned_int() {
 fn float() {
   let f32min = f32::MIN;
   let f32max = f32::MAX;
-  let s = format!("\
+  let f32min_max = format!("\
     |f32min: {f32min}
     |f32max:  {f32max}
-    |");
-
-
-  let f32min_max = s.strip_margin();
+    |").strip_margin();
   println!("{f32min_max}");
 
   let f64min = f64::MIN;
   let f64max = f64::MAX;
-  let s = format!("\
+  let f64min_max = format!("\
     |f64min: {f64min}
     |f64max:  {f64max}
-    |");
-
-  let f64min_max = s.strip_margin();
+    |").strip_margin();
   println!("{f64min_max}");
 
 }
