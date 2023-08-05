@@ -18,6 +18,7 @@ pub trait ScalaLikeStringOps {
   /// "
   /// ```
   /// ***
+  ///
   /// ## For `str`,
   /// ```
   /// let s = "a=123
@@ -30,6 +31,23 @@ pub trait ScalaLikeStringOps {
   /// "a=123
   /// b=456
   /// c=789
+  /// "
+  /// ```
+  /// ***
+  ///
+  /// ## Intentional indentation with `|`
+  ///
+  /// ```
+  /// let s = "a=123
+  ///         |  b=456
+  ///         |    c=789
+  ///         |".strip_margin();
+  /// ```
+  /// returns
+  /// ```
+  /// "a=123
+  ///   b=456
+  ///     c=789
   /// "
   /// ```
   fn strip_margin(&self) -> String;
