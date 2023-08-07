@@ -11,8 +11,11 @@ mod custom_types {
     pub mod c_like;
     pub mod linked_list;
   }
+
+  pub mod constants;
 }
 
+use custom_types::constants;
 use custom_types::enums;
 use custom_types::structs;
 
@@ -53,4 +56,7 @@ fn main() {
   println!("         i32_nums2: {:?}", i32_nums2);
   println!("i32_nums2.render(): {}", i32_nums2.render());
   println!("i32_nums2.length(): {:?}", i32_nums2.length());
+
+  println!("\n===== constants =====");
+  constants::constants();
 }
