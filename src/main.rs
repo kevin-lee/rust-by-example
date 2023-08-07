@@ -1,6 +1,3 @@
-use custom_types::enums;
-use custom_types::structs;
-
 mod hello;
 mod primitives;
 mod string_ops;
@@ -15,6 +12,9 @@ mod custom_types {
     pub mod linked_list;
   }
 }
+
+use custom_types::enums;
+use custom_types::structs;
 
 fn main() {
   println!("===== hello world =====");
