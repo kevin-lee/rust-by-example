@@ -15,11 +15,15 @@ mod custom_types {
   pub mod constants;
 }
 
-mod variable_bindings;
+mod variable_bindings {
+  pub mod bindings;
+}
 
 use custom_types::constants;
 use custom_types::enums;
 use custom_types::structs;
+
+use variable_bindings::bindings;
 
 fn main() {
   println!("===== hello world =====");
@@ -63,5 +67,6 @@ fn main() {
   constants::constants();
 
   println!("\n===== variable_bindings =====");
-  variable_bindings::variable_bindings();
+  bindings::variable_bindings();
+
 }
