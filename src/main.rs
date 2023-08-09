@@ -15,6 +15,8 @@ mod custom_types {
   pub mod constants;
 }
 
+mod variable_bindings;
+
 use custom_types::constants;
 use custom_types::enums;
 use custom_types::structs;
@@ -59,4 +61,7 @@ fn main() {
 
   println!("\n===== constants =====");
   constants::constants();
+
+  println!("\n===== variable_bindings =====");
+  variable_bindings::variable_bindings();
 }
