@@ -17,6 +17,7 @@ mod custom_types {
 
 mod variable_bindings {
   pub mod bindings;
+  pub mod mutability;
 }
 
 use custom_types::constants;
@@ -24,6 +25,7 @@ use custom_types::enums;
 use custom_types::structs;
 
 use variable_bindings::bindings;
+use variable_bindings::mutability;
 
 fn main() {
   println!("===== hello world =====");
@@ -68,5 +70,8 @@ fn main() {
 
   println!("\n===== variable_bindings =====");
   bindings::variable_bindings();
+
+  println!("\n===== mutability =====");
+  mutability::mutability();
 
 }
