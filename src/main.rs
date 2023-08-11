@@ -18,6 +18,7 @@ mod custom_types {
 mod variable_bindings {
   pub mod bindings;
   pub mod mutability;
+  pub mod scope_and_shadowing;
 }
 
 use custom_types::constants;
@@ -26,6 +27,7 @@ use custom_types::structs;
 
 use variable_bindings::bindings;
 use variable_bindings::mutability;
+use variable_bindings::scope_and_shadowing;
 
 fn main() {
   println!("===== hello world =====");
@@ -68,10 +70,16 @@ fn main() {
   println!("\n===== constants =====");
   constants::constants();
 
-  println!("\n===== variable_bindings =====");
+  println!("\n===== variable bindings =====");
   bindings::variable_bindings();
 
-  println!("\n===== mutability =====");
+  println!("\n===== variable bindings - mutability =====");
   mutability::mutability();
+
+  println!("\n===== variable bindings - scope =====");
+  scope_and_shadowing::scope();
+
+  println!("\n===== variable bindings - shadowing =====");
+  scope_and_shadowing::shadowing();
 
 }
