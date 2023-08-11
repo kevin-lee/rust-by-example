@@ -19,6 +19,7 @@ mod variable_bindings {
   pub mod bindings;
   pub mod mutability;
   pub mod scope_and_shadowing;
+  pub mod declare_first;
 }
 
 use custom_types::constants;
@@ -28,6 +29,7 @@ use custom_types::structs;
 use variable_bindings::bindings;
 use variable_bindings::mutability;
 use variable_bindings::scope_and_shadowing;
+use variable_bindings::declare_first;
 
 fn main() {
   println!("===== hello world =====");
@@ -81,5 +83,8 @@ fn main() {
 
   println!("\n===== variable bindings - shadowing =====");
   scope_and_shadowing::shadowing();
+
+  println!("\n===== variable bindings - declare first =====");
+  declare_first::declare_first();
 
 }
