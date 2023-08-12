@@ -20,6 +20,7 @@ mod variable_bindings {
   pub mod mutability;
   pub mod scope_and_shadowing;
   pub mod declare_first;
+  pub mod freezing;
 }
 
 use custom_types::constants;
@@ -30,6 +31,7 @@ use variable_bindings::bindings;
 use variable_bindings::mutability;
 use variable_bindings::scope_and_shadowing;
 use variable_bindings::declare_first;
+use variable_bindings::freezing;
 
 fn main() {
   println!("===== hello world =====");
@@ -87,4 +89,6 @@ fn main() {
   println!("\n===== variable bindings - declare first =====");
   declare_first::declare_first();
 
+  println!("\n===== variable bindings - freezing (mutability frozen by shadowing) =====");
+  freezing::freezing();
 }
